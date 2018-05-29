@@ -27,7 +27,7 @@ class FeedsDataSource : GenericDataSource<ListModel>, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let feedsValue = self.data.value[indexPath.row]
-        if feedsValue.imageRef != "" {
+        if feedsValue.imageRef != ""  && feedsValue.imageRef != "N/A"{
             let cell = tableView.dequeueReusableCell(withIdentifier: landscapeReuseIdentifier, for: indexPath) as! LandscapeTableViewCell
             cell.feedsValue = feedsValue
             ImageHelper().updateImageForTableViewCell(cell, inTableView: tableView, imageURL:feedsValue.imageRef, atIndexPath: indexPath)
