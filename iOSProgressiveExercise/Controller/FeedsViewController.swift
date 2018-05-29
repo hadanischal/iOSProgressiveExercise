@@ -25,6 +25,7 @@ class FeedsViewController: UIViewController {
         self.dataSource.data.addAndNotify(observer: self) { [weak self] in
             self?.tableView.reloadData()
         }
+        self.setupUI()
         self.setupUIRefreshControl()
         self.serviceCall()
     }
@@ -50,6 +51,18 @@ class FeedsViewController: UIViewController {
             }
         }
         refreshControl.endRefreshing()
+    }
+}
+
+
+// MARK:
+// MARK: Setup UI
+
+extension FeedsViewController {
+    func setupUI() {
+        self.tableView.backgroundColor = ThemeColor.white
+        self.view.backgroundColor = ThemeColor.white
+        self.tableView.tableFooterView = UIView(frame: CGRect.zero)
     }
 }
 
