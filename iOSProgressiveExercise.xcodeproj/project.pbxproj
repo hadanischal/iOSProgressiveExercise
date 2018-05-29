@@ -18,6 +18,19 @@
 		AF18CD8820BCEF82008AF150 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD8720BCEF82008AF150 /* FeedsViewController.swift */; };
 		AF18CD8B20BCF161008AF150 /* LandscapeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD8A20BCF161008AF150 /* LandscapeTableViewCell.swift */; };
 		AF18CD8D20BCF1F7008AF150 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD8C20BCF1F7008AF150 /* TableViewController.swift */; };
+		AF18CD9820BCF361008AF150 /* ParserHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD8F20BCF361008AF150 /* ParserHelper.swift */; };
+		AF18CD9920BCF361008AF150 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD9120BCF361008AF150 /* Result.swift */; };
+		AF18CD9A20BCF361008AF150 /* ErrorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD9220BCF361008AF150 /* ErrorResult.swift */; };
+		AF18CD9B20BCF361008AF150 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD9420BCF361008AF150 /* ImageManager.swift */; };
+		AF18CD9C20BCF361008AF150 /* RequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD9520BCF361008AF150 /* RequestService.swift */; };
+		AF18CD9D20BCF361008AF150 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD9620BCF361008AF150 /* RequestHandler.swift */; };
+		AF18CD9E20BCF361008AF150 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD9720BCF361008AF150 /* RequestFactory.swift */; };
+		AF18CDA020BCF3B6008AF150 /* FeedsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD9F20BCF3B6008AF150 /* FeedsService.swift */; };
+		AF18CDA220BCF41F008AF150 /* DynamicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CDA120BCF41F008AF150 /* DynamicValue.swift */; };
+		AF18CDA420BCF42F008AF150 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CDA320BCF42F008AF150 /* ListModel.swift */; };
+		AF18CDA620BCF444008AF150 /* FeedsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CDA520BCF444008AF150 /* FeedsModel.swift */; };
+		AF18CDA820BCF488008AF150 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CDA720BCF488008AF150 /* Utility.swift */; };
+		AF18CDAA20BCF4AE008AF150 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CDA920BCF4AE008AF150 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +68,19 @@
 		AF18CD8720BCEF82008AF150 /* FeedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
 		AF18CD8A20BCF161008AF150 /* LandscapeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeTableViewCell.swift; sourceTree = "<group>"; };
 		AF18CD8C20BCF1F7008AF150 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		AF18CD8F20BCF361008AF150 /* ParserHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserHelper.swift; sourceTree = "<group>"; };
+		AF18CD9120BCF361008AF150 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		AF18CD9220BCF361008AF150 /* ErrorResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorResult.swift; sourceTree = "<group>"; };
+		AF18CD9420BCF361008AF150 /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		AF18CD9520BCF361008AF150 /* RequestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestService.swift; sourceTree = "<group>"; };
+		AF18CD9620BCF361008AF150 /* RequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
+		AF18CD9720BCF361008AF150 /* RequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
+		AF18CD9F20BCF3B6008AF150 /* FeedsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsService.swift; sourceTree = "<group>"; };
+		AF18CDA120BCF41F008AF150 /* DynamicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicValue.swift; sourceTree = "<group>"; };
+		AF18CDA320BCF42F008AF150 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		AF18CDA520BCF444008AF150 /* FeedsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsModel.swift; sourceTree = "<group>"; };
+		AF18CDA720BCF488008AF150 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		AF18CDA920BCF4AE008AF150 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +172,8 @@
 		AF18CD7420BCEEB5008AF150 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				AF18CDA920BCF4AE008AF150 /* Reachability.swift */,
+				AF18CDA720BCF488008AF150 /* Utility.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -190,6 +218,10 @@
 		AF18CD7B20BCEEB5008AF150 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				AF18CD9F20BCF3B6008AF150 /* FeedsService.swift */,
+				AF18CD9320BCF361008AF150 /* Network */,
+				AF18CD8E20BCF361008AF150 /* Parser */,
+				AF18CD9020BCF361008AF150 /* Result */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -197,6 +229,9 @@
 		AF18CD7C20BCEEB6008AF150 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AF18CDA120BCF41F008AF150 /* DynamicValue.swift */,
+				AF18CDA320BCF42F008AF150 /* ListModel.swift */,
+				AF18CDA520BCF444008AF150 /* FeedsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -247,6 +282,34 @@
 				AF18CD8A20BCF161008AF150 /* LandscapeTableViewCell.swift */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		AF18CD8E20BCF361008AF150 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				AF18CD8F20BCF361008AF150 /* ParserHelper.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		AF18CD9020BCF361008AF150 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				AF18CD9120BCF361008AF150 /* Result.swift */,
+				AF18CD9220BCF361008AF150 /* ErrorResult.swift */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		AF18CD9320BCF361008AF150 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AF18CD9420BCF361008AF150 /* ImageManager.swift */,
+				AF18CD9520BCF361008AF150 /* RequestService.swift */,
+				AF18CD9620BCF361008AF150 /* RequestHandler.swift */,
+				AF18CD9720BCF361008AF150 /* RequestFactory.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,11 +447,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF18CDA020BCF3B6008AF150 /* FeedsService.swift in Sources */,
+				AF18CD9E20BCF361008AF150 /* RequestFactory.swift in Sources */,
 				AF18CD8620BCEEB6008AF150 /* AppDelegate.swift in Sources */,
+				AF18CDA620BCF444008AF150 /* FeedsModel.swift in Sources */,
 				AF18CD8B20BCF161008AF150 /* LandscapeTableViewCell.swift in Sources */,
+				AF18CD9820BCF361008AF150 /* ParserHelper.swift in Sources */,
+				AF18CD9C20BCF361008AF150 /* RequestService.swift in Sources */,
+				AF18CD9D20BCF361008AF150 /* RequestHandler.swift in Sources */,
+				AF18CD9B20BCF361008AF150 /* ImageManager.swift in Sources */,
 				AF18CD8820BCEF82008AF150 /* FeedsViewController.swift in Sources */,
+				AF18CDA420BCF42F008AF150 /* ListModel.swift in Sources */,
+				AF18CD9920BCF361008AF150 /* Result.swift in Sources */,
+				AF18CD9A20BCF361008AF150 /* ErrorResult.swift in Sources */,
 				AF18CD8D20BCF1F7008AF150 /* TableViewController.swift in Sources */,
+				AF18CDAA20BCF4AE008AF150 /* Reachability.swift in Sources */,
 				AF18CD4A20BCEAA9008AF150 /* iOSProgressiveExercise.xcdatamodeld in Sources */,
+				AF18CDA220BCF41F008AF150 /* DynamicValue.swift in Sources */,
+				AF18CDA820BCF488008AF150 /* Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
