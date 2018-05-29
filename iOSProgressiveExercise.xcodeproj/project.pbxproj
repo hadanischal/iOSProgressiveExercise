@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AF18CD4220BCEAA9008AF150 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD4120BCEAA9008AF150 /* AppDelegate.swift */; };
-		AF18CD4420BCEAA9008AF150 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD4320BCEAA9008AF150 /* ViewController.swift */; };
 		AF18CD4720BCEAA9008AF150 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF18CD4520BCEAA9008AF150 /* Main.storyboard */; };
 		AF18CD4A20BCEAA9008AF150 /* iOSProgressiveExercise.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD4820BCEAA9008AF150 /* iOSProgressiveExercise.xcdatamodeld */; };
-		AF18CD4C20BCEAA9008AF150 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF18CD4B20BCEAA9008AF150 /* Assets.xcassets */; };
 		AF18CD4F20BCEAA9008AF150 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF18CD4D20BCEAA9008AF150 /* LaunchScreen.storyboard */; };
 		AF18CD5A20BCEAA9008AF150 /* iOSProgressiveExerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD5920BCEAA9008AF150 /* iOSProgressiveExerciseTests.swift */; };
 		AF18CD6520BCEAA9008AF150 /* iOSProgressiveExerciseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD6420BCEAA9008AF150 /* iOSProgressiveExerciseUITests.swift */; };
 		AF18CD7320BCEDE9008AF150 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = AF18CD7220BCEDE9008AF150 /* .gitignore */; };
+		AF18CD8420BCEEB6008AF150 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF18CD7620BCEEB5008AF150 /* Assets.xcassets */; };
+		AF18CD8520BCEEB6008AF150 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD8020BCEEB6008AF150 /* ViewController.swift */; };
+		AF18CD8620BCEEB6008AF150 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD8320BCEEB6008AF150 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +37,8 @@
 
 /* Begin PBXFileReference section */
 		AF18CD3E20BCEAA9008AF150 /* iOSProgressiveExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSProgressiveExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF18CD4120BCEAA9008AF150 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF18CD4320BCEAA9008AF150 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AF18CD4620BCEAA9008AF150 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF18CD4920BCEAA9008AF150 /* iOSProgressiveExercise.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSProgressiveExercise.xcdatamodel; sourceTree = "<group>"; };
-		AF18CD4B20BCEAA9008AF150 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF18CD4E20BCEAA9008AF150 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF18CD5020BCEAA9008AF150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF18CD5520BCEAA9008AF150 /* iOSProgressiveExerciseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSProgressiveExerciseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +48,9 @@
 		AF18CD6420BCEAA9008AF150 /* iOSProgressiveExerciseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSProgressiveExerciseUITests.swift; sourceTree = "<group>"; };
 		AF18CD6620BCEAA9008AF150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF18CD7220BCEDE9008AF150 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		AF18CD7620BCEEB5008AF150 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF18CD8020BCEEB6008AF150 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AF18CD8320BCEEB6008AF150 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,11 +102,19 @@
 		AF18CD4020BCEAA9008AF150 /* iOSProgressiveExercise */ = {
 			isa = PBXGroup;
 			children = (
-				AF18CD4120BCEAA9008AF150 /* AppDelegate.swift */,
-				AF18CD4320BCEAA9008AF150 /* ViewController.swift */,
-				AF18CD4520BCEAA9008AF150 /* Main.storyboard */,
-				AF18CD4B20BCEAA9008AF150 /* Assets.xcassets */,
-				AF18CD4D20BCEAA9008AF150 /* LaunchScreen.storyboard */,
+				AF18CD8220BCEEB6008AF150 /* AppDelegate */,
+				AF18CD7E20BCEEB6008AF150 /* Constants */,
+				AF18CD7F20BCEEB6008AF150 /* Controller */,
+				AF18CD8120BCEEB6008AF150 /* Extension */,
+				AF18CD7920BCEEB5008AF150 /* FeedsService */,
+				AF18CD7720BCEEB5008AF150 /* Layouts */,
+				AF18CD7C20BCEEB6008AF150 /* Model */,
+				AF18CD7520BCEEB5008AF150 /* Resources */,
+				AF18CD7B20BCEEB5008AF150 /* Services */,
+				AF18CD7D20BCEEB6008AF150 /* Storyboard */,
+				AF18CD7420BCEEB5008AF150 /* Util */,
+				AF18CD7820BCEEB5008AF150 /* View */,
+				AF18CD7A20BCEEB5008AF150 /* ViewModels */,
 				AF18CD5020BCEAA9008AF150 /* Info.plist */,
 				AF18CD4820BCEAA9008AF150 /* iOSProgressiveExercise.xcdatamodeld */,
 			);
@@ -129,6 +137,102 @@
 				AF18CD6620BCEAA9008AF150 /* Info.plist */,
 			);
 			path = iOSProgressiveExerciseUITests;
+			sourceTree = "<group>";
+		};
+		AF18CD7420BCEEB5008AF150 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		AF18CD7520BCEEB5008AF150 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AF18CD7620BCEEB5008AF150 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AF18CD7720BCEEB5008AF150 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		AF18CD7820BCEEB5008AF150 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AF18CD7920BCEEB5008AF150 /* FeedsService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FeedsService;
+			sourceTree = "<group>";
+		};
+		AF18CD7A20BCEEB5008AF150 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AF18CD7B20BCEEB5008AF150 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AF18CD7C20BCEEB6008AF150 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AF18CD7D20BCEEB6008AF150 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				AF18CD4520BCEAA9008AF150 /* Main.storyboard */,
+				AF18CD4D20BCEAA9008AF150 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		AF18CD7E20BCEEB6008AF150 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		AF18CD7F20BCEEB6008AF150 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AF18CD8020BCEEB6008AF150 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AF18CD8120BCEEB6008AF150 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		AF18CD8220BCEEB6008AF150 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				AF18CD8320BCEEB6008AF150 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,7 +344,7 @@
 			files = (
 				AF18CD7320BCEDE9008AF150 /* .gitignore in Resources */,
 				AF18CD4F20BCEAA9008AF150 /* LaunchScreen.storyboard in Resources */,
-				AF18CD4C20BCEAA9008AF150 /* Assets.xcassets in Resources */,
+				AF18CD8420BCEEB6008AF150 /* Assets.xcassets in Resources */,
 				AF18CD4720BCEAA9008AF150 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,9 +370,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF18CD4420BCEAA9008AF150 /* ViewController.swift in Sources */,
+				AF18CD8620BCEEB6008AF150 /* AppDelegate.swift in Sources */,
+				AF18CD8520BCEEB6008AF150 /* ViewController.swift in Sources */,
 				AF18CD4A20BCEAA9008AF150 /* iOSProgressiveExercise.xcdatamodeld in Sources */,
-				AF18CD4220BCEAA9008AF150 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
