@@ -12,7 +12,6 @@ import UIKit
 class GenericDataSource<T> : NSObject {
     var data: DynamicValue<[T]> = DynamicValue([])
     fileprivate let landscapeReuseIdentifier = "LandscapeTableViewCell"
-    
 }
 
 class FeedsDataSource : GenericDataSource<ListModel>, UITableViewDataSource {
@@ -26,18 +25,25 @@ class FeedsDataSource : GenericDataSource<ListModel>, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: landscapeReuseIdentifier, for: indexPath) as! LandscapeTableViewCell
         let feedsValue = self.data.value[indexPath.row]
+        cell.feedsValue = feedsValue
         if feedsValue.imageRef != ""  && feedsValue.imageRef != "N/A"{
-            let cell = tableView.dequeueReusableCell(withIdentifier: landscapeReuseIdentifier, for: indexPath) as! LandscapeTableViewCell
-            cell.feedsValue = feedsValue
-            ImageHelper().updateImageForTableViewCell(cell, inTableView: tableView, imageURL:feedsValue.imageRef, atIndexPath: indexPath)
-            return cell
+            ImageHelper().updateImageForTableViewCell(cell, inTableView: tableView, imageURL:feedsValue.imageRef, atIndexPath: indexPath){ (success, image) -> Void in
+                if success && image != nil {
+                    cell.thumbnailImage.isHidden = false
+                    cell.imageWidthConstraint.constant = 60
+                }else{
+                    cell.thumbnailImage.isHidden = true
+                    cell.imageWidthConstraint.constant = 0
+                }
+            }
         }else{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Header")!
-            cell.textLabel?.text = feedsValue.title
-            cell.detailTextLabel?.text = feedsValue.description
-            return cell
+            cell.thumbnailImage.isHidden = true
+            cell.imageWidthConstraint.constant = 0
         }
+        return cell
+        
     }
 }
 

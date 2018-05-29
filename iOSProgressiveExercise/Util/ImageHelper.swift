@@ -24,11 +24,25 @@ class ImageHelper:imageSession{
         imageView?.image = kLazyLoadPlaceholderImage
         imageManager.downloadImageFromURL(imageURL) { (success, image) -> Void in
             if success && image != nil {
-                //print(image)
                 if (tableView.indexPath(for: cell) as NSIndexPath?)?.row == (indexPath as NSIndexPath).row {
                     imageView?.image = image
                 }
             }
+        }
+    }
+    func updateImageForTableViewCell(_ cell: UITableViewCell, inTableView tableView: UITableView, imageURL: String, atIndexPath indexPath: IndexPath , completion: ((_ success: Bool, _ image: UIImage?) -> Void)?) {
+        let imageView = cell.viewWithTag(kLazyLoadCellImageViewTag) as? UIImageView
+        imageView?.image = kLazyLoadPlaceholderImage
+        imageManager.downloadImageFromURL(imageURL) { (success, image) -> Void in
+            if success && image != nil {
+                if (tableView.indexPath(for: cell) as NSIndexPath?)?.row == (indexPath as NSIndexPath).row {
+                    imageView?.image = image
+                }
+            }else{
+                //DispatchQueue.main.async(execute: { completion?(true, image) });
+            }
+            DispatchQueue.main.async(execute: { completion?(true, image) });
+
         }
     }
     

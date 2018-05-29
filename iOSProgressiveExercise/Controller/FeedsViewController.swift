@@ -53,10 +53,6 @@ class FeedsViewController: UIViewController {
     }
 }
 
-
-// MARK:
-// MARK: Setup UI
-
 extension FeedsViewController {
     func setupUI() {
         self.tableView.backgroundColor = ThemeColor.white

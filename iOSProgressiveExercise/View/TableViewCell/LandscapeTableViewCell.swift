@@ -13,6 +13,9 @@ class LandscapeTableViewCell: UITableViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
 
+    @IBOutlet weak var imageWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageHeightConstraint: NSLayoutConstraint!
+
     var feedsValue : ListModel? {
         didSet {
             guard let feeds = feedsValue else {
