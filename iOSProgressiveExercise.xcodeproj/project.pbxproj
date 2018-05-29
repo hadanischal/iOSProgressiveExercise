@@ -14,8 +14,10 @@
 		AF18CD6520BCEAA9008AF150 /* iOSProgressiveExerciseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD6420BCEAA9008AF150 /* iOSProgressiveExerciseUITests.swift */; };
 		AF18CD7320BCEDE9008AF150 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = AF18CD7220BCEDE9008AF150 /* .gitignore */; };
 		AF18CD8420BCEEB6008AF150 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF18CD7620BCEEB5008AF150 /* Assets.xcassets */; };
-		AF18CD8520BCEEB6008AF150 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD8020BCEEB6008AF150 /* ViewController.swift */; };
 		AF18CD8620BCEEB6008AF150 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD8320BCEEB6008AF150 /* AppDelegate.swift */; };
+		AF18CD8820BCEF82008AF150 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD8720BCEF82008AF150 /* FeedsViewController.swift */; };
+		AF18CD8B20BCF161008AF150 /* LandscapeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD8A20BCF161008AF150 /* LandscapeTableViewCell.swift */; };
+		AF18CD8D20BCF1F7008AF150 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD8C20BCF1F7008AF150 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +51,10 @@
 		AF18CD6620BCEAA9008AF150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF18CD7220BCEDE9008AF150 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		AF18CD7620BCEEB5008AF150 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AF18CD8020BCEEB6008AF150 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AF18CD8320BCEEB6008AF150 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AF18CD8720BCEF82008AF150 /* FeedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
+		AF18CD8A20BCF161008AF150 /* LandscapeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeTableViewCell.swift; sourceTree = "<group>"; };
+		AF18CD8C20BCF1F7008AF150 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,17 +108,17 @@
 			children = (
 				AF18CD8220BCEEB6008AF150 /* AppDelegate */,
 				AF18CD7E20BCEEB6008AF150 /* Constants */,
+				AF18CD7C20BCEEB6008AF150 /* Model */,
+				AF18CD7A20BCEEB5008AF150 /* ViewModels */,
+				AF18CD7820BCEEB5008AF150 /* View */,
 				AF18CD7F20BCEEB6008AF150 /* Controller */,
 				AF18CD8120BCEEB6008AF150 /* Extension */,
 				AF18CD7920BCEEB5008AF150 /* FeedsService */,
 				AF18CD7720BCEEB5008AF150 /* Layouts */,
-				AF18CD7C20BCEEB6008AF150 /* Model */,
 				AF18CD7520BCEEB5008AF150 /* Resources */,
 				AF18CD7B20BCEEB5008AF150 /* Services */,
 				AF18CD7D20BCEEB6008AF150 /* Storyboard */,
 				AF18CD7420BCEEB5008AF150 /* Util */,
-				AF18CD7820BCEEB5008AF150 /* View */,
-				AF18CD7A20BCEEB5008AF150 /* ViewModels */,
 				AF18CD5020BCEAA9008AF150 /* Info.plist */,
 				AF18CD4820BCEAA9008AF150 /* iOSProgressiveExercise.xcdatamodeld */,
 			);
@@ -164,6 +168,7 @@
 		AF18CD7820BCEEB5008AF150 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AF18CD8920BCF136008AF150 /* TableViewCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -215,7 +220,8 @@
 		AF18CD7F20BCEEB6008AF150 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				AF18CD8020BCEEB6008AF150 /* ViewController.swift */,
+				AF18CD8720BCEF82008AF150 /* FeedsViewController.swift */,
+				AF18CD8C20BCF1F7008AF150 /* TableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -233,6 +239,14 @@
 				AF18CD8320BCEEB6008AF150 /* AppDelegate.swift */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		AF18CD8920BCF136008AF150 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				AF18CD8A20BCF161008AF150 /* LandscapeTableViewCell.swift */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,7 +385,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF18CD8620BCEEB6008AF150 /* AppDelegate.swift in Sources */,
-				AF18CD8520BCEEB6008AF150 /* ViewController.swift in Sources */,
+				AF18CD8B20BCF161008AF150 /* LandscapeTableViewCell.swift in Sources */,
+				AF18CD8820BCEF82008AF150 /* FeedsViewController.swift in Sources */,
+				AF18CD8D20BCF1F7008AF150 /* TableViewController.swift in Sources */,
 				AF18CD4A20BCEAA9008AF150 /* iOSProgressiveExercise.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
