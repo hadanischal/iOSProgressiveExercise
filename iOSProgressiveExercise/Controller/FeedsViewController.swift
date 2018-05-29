@@ -11,7 +11,7 @@ import UIKit
 class FeedsViewController: UIViewController {
     private let refreshControl = UIRefreshControl()
     @IBOutlet weak var tableView: UITableView!
-
+    
     fileprivate var service : FeedsService! = FeedsService()
     let dataSource = FeedsDataSource()
     lazy var viewModel : FeedsViewModel = {
@@ -29,7 +29,6 @@ class FeedsViewController: UIViewController {
         self.setupUIRefreshControl()
         self.serviceCall()
     }
-    
     
     func setupUIRefreshControl(){
         refreshControl.addTarget(self, action: #selector(serviceCall), for: UIControlEvents.valueChanged)
@@ -63,6 +62,7 @@ extension FeedsViewController {
         self.tableView.backgroundColor = ThemeColor.white
         self.view.backgroundColor = ThemeColor.white
         self.tableView.tableFooterView = UIView(frame: CGRect.zero)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.refresh, target: self, action: #selector(serviceCall))
     }
 }
 
@@ -75,8 +75,8 @@ extension FeedsViewController : UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
-        
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }

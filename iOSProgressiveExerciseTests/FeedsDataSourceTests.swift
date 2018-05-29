@@ -8,29 +8,82 @@
 
 import XCTest
 
+@testable import iOSProgressiveExercise
 class FeedsDataSourceTests: XCTestCase {
-        
+    var dataSource : FeedsDataSource!
+    
     override func setUp() {
         super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        dataSource = FeedsDataSource()
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        dataSource = nil
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testEmptyValueInDataSource() {
+        dataSource.data.value = []  // giving empty data value
+        let tableView = UITableView()
+        tableView.dataSource = dataSource
+        XCTAssertEqual(dataSource.numberOfSections(in: tableView), 1, "Expected one section in table view")
+        XCTAssertEqual(dataSource.tableView(tableView, numberOfRowsInSection: 0), 0, "Expected no cell in table view")
+    }
+    
+    func testValueInDataSource() {
+        let responseResults:[ListModel] = getDataValue()
+        let newArray = Array(responseResults[0..<2])
+        dataSource.data.value = newArray
+        let tableView = UITableView()
+        tableView.dataSource = dataSource
+        XCTAssertEqual(dataSource.numberOfSections(in: tableView), 1, "Expected one section in table view")
+        XCTAssertEqual(dataSource.tableView(tableView, numberOfRowsInSection: 0), 2, "Expected two cell in table view")
+    }
+    
+    func testValueCell() {
+        dataSource.data.value = getDataValue()
+        let tableView = UITableView()
+        tableView.dataSource = dataSource
+        tableView.register(LandscapeTableViewCell.self, forCellReuseIdentifier: "LandscapeTableViewCell")
+        let indexPath = IndexPath(row: 0, section: 0)
+        guard let _ = dataSource.tableView(tableView, cellForRowAt: indexPath) as? LandscapeTableViewCell else {
+            XCTAssert(false, "Expected LandscapeTableViewCell class")
+            return
+        }
+    }
+    
+    func getDataValue() ->[ListModel]{
+        var responseResults = [ListModel]()
+        guard let data = FileManager.readJson(forResource: "facts") else {
+            XCTAssert(false, "Can't get data from facts.json")
+            return responseResults
+        }
+        let completion : ((Result<FeedsModel, ErrorResult>) -> Void) = { result in
+            switch result {
+            case .failure(_):
+                XCTAssert(false, "Expected valid converter")
+            case .success(let converter):
+                print(converter)
+                responseResults = converter.rows
+                break
+            }
+        }
+        ParserHelper.parse(data: data, completion: completion)
+        return responseResults
     }
     
 }
+extension FileManager {
+    static func readJson(forResource fileName: String ) -> Data? {
+        let bundle = Bundle(for: FeedsDataSourceTests.self)
+        if let path = bundle.path(forResource: fileName, ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                return data
+            } catch {
+            }
+        }
+        return nil
+    }
+}
+

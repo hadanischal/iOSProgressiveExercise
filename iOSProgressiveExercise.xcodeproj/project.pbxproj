@@ -40,6 +40,8 @@
 		AFCE990A20BD028700F3FA72 /* FeedsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE990920BD028700F3FA72 /* FeedsViewControllerTests.swift */; };
 		AFCE990C20BD029800F3FA72 /* FeedsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE990B20BD029800F3FA72 /* FeedsViewModelTests.swift */; };
 		AFCE990E20BD02AA00F3FA72 /* FeedsModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE990D20BD02AA00F3FA72 /* FeedsModelTests.swift */; };
+		AFCE991020BD039100F3FA72 /* facts.json in Resources */ = {isa = PBXBuildFile; fileRef = AFCE990F20BD039100F3FA72 /* facts.json */; };
+		AFCE991220BD0D0E00F3FA72 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE991120BD0D0E00F3FA72 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,8 @@
 		AFCE990920BD028700F3FA72 /* FeedsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsViewControllerTests.swift; sourceTree = "<group>"; };
 		AFCE990B20BD029800F3FA72 /* FeedsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsViewModelTests.swift; sourceTree = "<group>"; };
 		AFCE990D20BD02AA00F3FA72 /* FeedsModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsModelTests.swift; sourceTree = "<group>"; };
+		AFCE990F20BD039100F3FA72 /* facts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = facts.json; sourceTree = "<group>"; };
+		AFCE991120BD0D0E00F3FA72 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,11 +177,12 @@
 			isa = PBXGroup;
 			children = (
 				AF18CD5920BCEAA9008AF150 /* iOSProgressiveExerciseTests.swift */,
+				AFCE990B20BD029800F3FA72 /* FeedsViewModelTests.swift */,
 				AFCE990520BD026700F3FA72 /* FeedsDataSourceTests.swift */,
 				AFCE990720BD027700F3FA72 /* FeedsServiceTests.swift */,
-				AFCE990920BD028700F3FA72 /* FeedsViewControllerTests.swift */,
-				AFCE990B20BD029800F3FA72 /* FeedsViewModelTests.swift */,
 				AFCE990D20BD02AA00F3FA72 /* FeedsModelTests.swift */,
+				AFCE990920BD028700F3FA72 /* FeedsViewControllerTests.swift */,
+				AFCE990F20BD039100F3FA72 /* facts.json */,
 				AF18CD5B20BCEAA9008AF150 /* Info.plist */,
 			);
 			path = iOSProgressiveExerciseTests;
@@ -283,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				AF18CD8720BCEF82008AF150 /* FeedsViewController.swift */,
+				AFCE991120BD0D0E00F3FA72 /* TableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -457,6 +463,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFCE991020BD039100F3FA72 /* facts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +481,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFCE991220BD0D0E00F3FA72 /* TableViewController.swift in Sources */,
 				AF18CDA020BCF3B6008AF150 /* FeedsService.swift in Sources */,
 				AF18CD9E20BCF361008AF150 /* RequestFactory.swift in Sources */,
 				AF18CD8620BCEEB6008AF150 /* AppDelegate.swift in Sources */,

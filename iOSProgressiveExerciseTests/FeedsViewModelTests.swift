@@ -8,29 +8,57 @@
 
 import XCTest
 
+@testable import iOSProgressiveExercise
 class FeedsViewModelTests: XCTestCase {
-        
+    fileprivate class MockFeedsService: FeedsServiceProtocol {
+        var feedsData: FeedsModel?
+        func fetchConverter(_ completion: @escaping ((Result<FeedsModel, ErrorResult>) -> Void)) {
+            if let data = feedsData {
+                completion(Result.success(data))
+            } else {
+                completion(Result.failure(ErrorResult.custom(string: "No converter")))
+            }
+        }
+    }
+    
+    var viewModel : FeedsViewModel!
+    var dataSource : GenericDataSource<ListModel>!
+    fileprivate var service : MockFeedsService!
+    
     override func setUp() {
         super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        self.service = MockFeedsService()
+        self.dataSource = GenericDataSource<ListModel>()
+        self.viewModel = FeedsViewModel(service: service, dataSource: dataSource)
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        self.viewModel = nil
+        self.dataSource = nil
+        self.service = nil
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testFetchFeeds() {
+        service.feedsData = FeedsModel(title: "Canada", rows: [])
+        viewModel.fetchServiceCall{ result in
+            switch result {
+            case .failure(_) :
+                XCTAssert(false, "ViewModel should not be able to fetch without service")
+            default: break
+            }
+        }
+    }
+    
+    func testFetchNoFeeds() {
+        service.feedsData = nil
+        viewModel.fetchServiceCall { result in
+            switch result {
+            case .success(_) :
+                XCTAssert(false, "ViewModel should not be able to fetch ")
+            default: break
+            }
+        }
     }
     
 }

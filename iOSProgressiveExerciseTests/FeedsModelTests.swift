@@ -8,29 +8,55 @@
 
 import XCTest
 
+@testable import iOSProgressiveExercise
 class FeedsModelTests: XCTestCase {
-        
+    
     override func setUp() {
         super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testExampleEmptyCurrency() {
+        let data = Data()
+        let completion : ((Result<FeedsModel, ErrorResult>) -> Void) = { result in
+            switch result {
+            case .success(_):
+                XCTAssert(false, "Expected failure when no data")
+            default:
+                break
+            }
+        }
+        ParserHelper.parse(data: data, completion: completion)
     }
     
+    func testParseCurrency() {
+        guard let data = FileManager.readJson(forResource: "facts") else {
+            XCTAssert(false, "Can't get data from sample.json")
+            return
+        }
+        let completion : ((Result<FeedsModel, ErrorResult>) -> Void) = { result in
+            switch result {
+            case .failure(_):
+                XCTAssert(false, "Expected valid converter")
+            case .success(let converter):
+                XCTAssertEqual(converter.title, "About Canada", "Expected About Canada base")
+                XCTAssertEqual(converter.rows.count, 14, "Expected 14 rates")
+            }
+        }
+        ParserHelper.parse(data: data, completion: completion)
+    }
+    
+    func testWrongKeyCurrency() {
+        let dictionary = ["testObject" : 123 as AnyObject]
+        let result = FeedsModel.parseObject(dictionary: dictionary)
+        switch result {
+        case .success(_):
+            XCTAssert(false, "Expected failure when wrong data")
+        default:
+            return
+        }
+    }
 }
