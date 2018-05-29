@@ -40,5 +40,3 @@ class DynamicValue<T> {
         observers.removeAll()
     }
 }
-
-

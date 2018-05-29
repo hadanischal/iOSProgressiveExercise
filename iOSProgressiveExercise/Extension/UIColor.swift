@@ -31,10 +31,8 @@ extension UIColor {
     }
 }
 
-
 // MARK:
 // MARK :- convert a hex color to a UIColor
-
 
 extension UIColor {
     public convenience init?(hexString: String) {
@@ -59,10 +57,6 @@ extension UIColor {
                 }
             }
         }
-        
         return nil
     }
 }
-
-
-

@@ -43,7 +43,5 @@ class FeedsDataSource : GenericDataSource<ListModel>, UITableViewDataSource {
             cell.imageWidthConstraint.constant = 0
         }
         return cell
-        
     }
 }
-

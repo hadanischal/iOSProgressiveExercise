@@ -14,7 +14,6 @@ struct FeedsModel {
 }
 
 extension FeedsModel : Parceable {
-    
     static func parseObject(dictionary: [String : AnyObject]) -> Result<FeedsModel, ErrorResult> {
         if let base = dictionary["title"] as? String,
             let rows = dictionary["rows"] as? [AnyObject] {
@@ -30,5 +29,3 @@ extension FeedsModel : Parceable {
         }
     }
 }
-
-

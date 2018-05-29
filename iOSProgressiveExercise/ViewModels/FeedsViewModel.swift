@@ -21,7 +21,6 @@ class FeedsViewModel {
     }
     
     func fetchServiceCall(_ completion: ((Result<Bool, ErrorResult>) -> Void)? = nil) {
-                
         guard let service = service else {
             completion?(Result.failure(ErrorResult.custom(string: "Missing service")))
             return
@@ -47,6 +46,4 @@ class FeedsViewModel {
         let feedsValue = dataSource?.data.value[indexPath.row]
         selectedData = feedsValue
     }
-
 }
-
