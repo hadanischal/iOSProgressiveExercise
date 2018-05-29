@@ -13,6 +13,16 @@ class LandscapeTableViewCell: UITableViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
 
+    var feedsValue : ListModel? {
+        didSet {
+            guard let feeds = feedsValue else {
+                return
+            }
+            titleLabel?.text = feeds.title
+            descriptionLabel?.text = feeds.description
+        }
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

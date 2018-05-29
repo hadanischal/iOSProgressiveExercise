@@ -17,7 +17,6 @@
 		AF18CD8620BCEEB6008AF150 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD8320BCEEB6008AF150 /* AppDelegate.swift */; };
 		AF18CD8820BCEF82008AF150 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD8720BCEF82008AF150 /* FeedsViewController.swift */; };
 		AF18CD8B20BCF161008AF150 /* LandscapeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD8A20BCF161008AF150 /* LandscapeTableViewCell.swift */; };
-		AF18CD8D20BCF1F7008AF150 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD8C20BCF1F7008AF150 /* TableViewController.swift */; };
 		AF18CD9820BCF361008AF150 /* ParserHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD8F20BCF361008AF150 /* ParserHelper.swift */; };
 		AF18CD9920BCF361008AF150 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD9120BCF361008AF150 /* Result.swift */; };
 		AF18CD9A20BCF361008AF150 /* ErrorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD9220BCF361008AF150 /* ErrorResult.swift */; };
@@ -31,6 +30,9 @@
 		AF18CDA620BCF444008AF150 /* FeedsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CDA520BCF444008AF150 /* FeedsModel.swift */; };
 		AF18CDA820BCF488008AF150 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CDA720BCF488008AF150 /* Utility.swift */; };
 		AF18CDAA20BCF4AE008AF150 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CDA920BCF4AE008AF150 /* Reachability.swift */; };
+		AFCE98FD20BCFE0A00F3FA72 /* FeedsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE98FB20BCFE0A00F3FA72 /* FeedsDataSource.swift */; };
+		AFCE98FE20BCFE0B00F3FA72 /* FeedsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE98FC20BCFE0A00F3FA72 /* FeedsViewModel.swift */; };
+		AFCE990020BCFF0C00F3FA72 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCE98FF20BCFF0C00F3FA72 /* ImageHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +69,6 @@
 		AF18CD8320BCEEB6008AF150 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF18CD8720BCEF82008AF150 /* FeedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
 		AF18CD8A20BCF161008AF150 /* LandscapeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeTableViewCell.swift; sourceTree = "<group>"; };
-		AF18CD8C20BCF1F7008AF150 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		AF18CD8F20BCF361008AF150 /* ParserHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserHelper.swift; sourceTree = "<group>"; };
 		AF18CD9120BCF361008AF150 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		AF18CD9220BCF361008AF150 /* ErrorResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorResult.swift; sourceTree = "<group>"; };
@@ -81,6 +82,9 @@
 		AF18CDA520BCF444008AF150 /* FeedsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsModel.swift; sourceTree = "<group>"; };
 		AF18CDA720BCF488008AF150 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		AF18CDA920BCF4AE008AF150 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		AFCE98FB20BCFE0A00F3FA72 /* FeedsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsDataSource.swift; sourceTree = "<group>"; };
+		AFCE98FC20BCFE0A00F3FA72 /* FeedsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsViewModel.swift; sourceTree = "<group>"; };
+		AFCE98FF20BCFF0C00F3FA72 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +178,7 @@
 			children = (
 				AF18CDA920BCF4AE008AF150 /* Reachability.swift */,
 				AF18CDA720BCF488008AF150 /* Utility.swift */,
+				AFCE98FF20BCFF0C00F3FA72 /* ImageHelper.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -211,6 +216,8 @@
 		AF18CD7A20BCEEB5008AF150 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				AFCE98FB20BCFE0A00F3FA72 /* FeedsDataSource.swift */,
+				AFCE98FC20BCFE0A00F3FA72 /* FeedsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -256,7 +263,6 @@
 			isa = PBXGroup;
 			children = (
 				AF18CD8720BCEF82008AF150 /* FeedsViewController.swift */,
-				AF18CD8C20BCF1F7008AF150 /* TableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -453,17 +459,19 @@
 				AF18CDA620BCF444008AF150 /* FeedsModel.swift in Sources */,
 				AF18CD8B20BCF161008AF150 /* LandscapeTableViewCell.swift in Sources */,
 				AF18CD9820BCF361008AF150 /* ParserHelper.swift in Sources */,
+				AFCE98FD20BCFE0A00F3FA72 /* FeedsDataSource.swift in Sources */,
 				AF18CD9C20BCF361008AF150 /* RequestService.swift in Sources */,
 				AF18CD9D20BCF361008AF150 /* RequestHandler.swift in Sources */,
 				AF18CD9B20BCF361008AF150 /* ImageManager.swift in Sources */,
 				AF18CD8820BCEF82008AF150 /* FeedsViewController.swift in Sources */,
+				AFCE990020BCFF0C00F3FA72 /* ImageHelper.swift in Sources */,
 				AF18CDA420BCF42F008AF150 /* ListModel.swift in Sources */,
 				AF18CD9920BCF361008AF150 /* Result.swift in Sources */,
 				AF18CD9A20BCF361008AF150 /* ErrorResult.swift in Sources */,
-				AF18CD8D20BCF1F7008AF150 /* TableViewController.swift in Sources */,
 				AF18CDAA20BCF4AE008AF150 /* Reachability.swift in Sources */,
 				AF18CD4A20BCEAA9008AF150 /* iOSProgressiveExercise.xcdatamodeld in Sources */,
 				AF18CDA220BCF41F008AF150 /* DynamicValue.swift in Sources */,
+				AFCE98FE20BCFE0B00F3FA72 /* FeedsViewModel.swift in Sources */,
 				AF18CDA820BCF488008AF150 /* Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,40 +9,48 @@
 import UIKit
 
 class FeedsViewController: UIViewController {
-    fileprivate let landscapeReuseIdentifier = "LandscapeTableViewCell"
-    
+    private let refreshControl = UIRefreshControl()
     @IBOutlet weak var tableView: UITableView!
+
+    fileprivate var service : FeedsService! = FeedsService()
+    let dataSource = FeedsDataSource()
+    lazy var viewModel : FeedsViewModel = {
+        let viewModel = FeedsViewModel(service: service, dataSource: dataSource)
+        return viewModel
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.dataSource = self.dataSource
+        self.dataSource.data.addAndNotify(observer: self) { [weak self] in
+            self?.tableView.reloadData()
+        }
+        self.setupUIRefreshControl()
+        self.serviceCall()
+    }
+    
+    
+    func setupUIRefreshControl(){
+        refreshControl.addTarget(self, action: #selector(serviceCall), for: UIControlEvents.valueChanged)
+        self.tableView.addSubview(refreshControl)
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @objc func serviceCall() {
+        DispatchQueue.main.async {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
+            self.viewModel.fetchServiceCall { result in
+                switch result {
+                case .success :
+                    self.title = self.viewModel.title
+                    break
+                case .failure :
+                    break
+                }
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            }
+        }
+        refreshControl.endRefreshing()
     }
-    
-}
-// MARK: - UITableViewDataSource
-
-extension FeedsViewController:UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: landscapeReuseIdentifier, for: indexPath) as! LandscapeTableViewCell
-         return cell
-    }
-    
-    
 }
 
 // MARK: - TableViewDelegate Setup
