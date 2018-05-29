@@ -24,7 +24,6 @@ class ImageHelper:imageSession{
         imageView?.image = kLazyLoadPlaceholderImage
         imageManager.downloadImageFromURL(imageURL) { (success, image) -> Void in
             if success && image != nil {
-                
                 //print(image)
                 if (tableView.indexPath(for: cell) as NSIndexPath?)?.row == (indexPath as NSIndexPath).row {
                     imageView?.image = image
