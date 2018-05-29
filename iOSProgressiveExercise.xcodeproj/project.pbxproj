@@ -15,6 +15,7 @@
 		AF18CD4F20BCEAA9008AF150 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF18CD4D20BCEAA9008AF150 /* LaunchScreen.storyboard */; };
 		AF18CD5A20BCEAA9008AF150 /* iOSProgressiveExerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD5920BCEAA9008AF150 /* iOSProgressiveExerciseTests.swift */; };
 		AF18CD6520BCEAA9008AF150 /* iOSProgressiveExerciseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18CD6420BCEAA9008AF150 /* iOSProgressiveExerciseUITests.swift */; };
+		AF18CD7320BCEDE9008AF150 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = AF18CD7220BCEDE9008AF150 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		AF18CD6020BCEAA9008AF150 /* iOSProgressiveExerciseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSProgressiveExerciseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF18CD6420BCEAA9008AF150 /* iOSProgressiveExerciseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSProgressiveExerciseUITests.swift; sourceTree = "<group>"; };
 		AF18CD6620BCEAA9008AF150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF18CD7220BCEDE9008AF150 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		AF18CD3520BCEAA9008AF150 = {
 			isa = PBXGroup;
 			children = (
+				AF18CD7220BCEDE9008AF150 /* .gitignore */,
 				AF18CD4020BCEAA9008AF150 /* iOSProgressiveExercise */,
 				AF18CD5820BCEAA9008AF150 /* iOSProgressiveExerciseTests */,
 				AF18CD6320BCEAA9008AF150 /* iOSProgressiveExerciseUITests */,
@@ -235,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF18CD7320BCEDE9008AF150 /* .gitignore in Resources */,
 				AF18CD4F20BCEAA9008AF150 /* LaunchScreen.storyboard in Resources */,
 				AF18CD4C20BCEAA9008AF150 /* Assets.xcassets in Resources */,
 				AF18CD4720BCEAA9008AF150 /* Main.storyboard in Resources */,
